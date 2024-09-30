@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD con Axios y Sheet API</title>
+     <!-- Enlaces -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="main.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 p-5">
+    <div class="container mx-auto">
+        <h1 class="text-3xl font-bold mb-4">CRUD con Axios y Sheet.best</h1>
+
+        <!-- Formulario para agregar o actualizar datos -->
+        <form id="crudForm" class="bg-white p-6 rounded shadow-md mb-6">
+            <h2 class="text-2xl mb-4">Agregar o Actualizar Registro</h2>
+
+            <div class="mb-4">
+                <label for="nombre" class="block text-gray-700">Nombre:</label>
+                <input type="text" id="nombre" class="border border-gray-300 p-2 rounded w-full" required>
+            </div>
+
+            <div class="mb-4">
+                <label for="correo" class="block text-gray-700">Correo:</label>
+                <input type="email" id="correo" class="border border-gray-300 p-2 rounded w-full" required>
+            </div>
+
+            <div class="mb-4">
+                <label for="telefono" class="block text-gray-700">Teléfono:</label>
+                <input type="text" id="telefono" class="border border-gray-300 p-2 rounded w-full" required>
+            </div>
+
+            <div class="mb-4">
+                <label for="img" class="block text-gray-700">URL Imagen:</label>
+                <input type="text" id="img" class="border border-gray-300 p-2 rounded w-full">
+            </div>
+
+            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Guardar</button>
+        </form>
+
+        <!-- Tabla para mostrar los datos -->
+        <table class="min-w-full bg-white shadow-md rounded-lg">
+            <thead>
+                <tr>
+                    <th class="py-2 px-4 bg-gray-200">Nombre</th>
+                    <th class="py-2 px-4 bg-gray-200">Correo</th>
+                    <th class="py-2 px-4 bg-gray-200">Teléfono</th>
+                    <th class="py-2 px-4 bg-gray-200">Imagen</th>
+                    <th class="py-2 px-4 bg-gray-200">Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="dataTable">
+                <!-- Los datos se insertarán aquí -->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
